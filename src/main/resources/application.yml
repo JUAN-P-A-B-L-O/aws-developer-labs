@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: aws-developer-labs
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+aws:
+  s3:
+    bucket-name: ${AWS_BUCKET_NAME:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
